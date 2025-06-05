@@ -18,7 +18,16 @@ header {
     padding: 1rem 2rem;
     text-align: left;
     /*margin-botton: 20px;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(97deg, #000000 0%, #1C1519 0%, #4E2B9B 100%);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
+
 
 header h3 {
     font-size: 1.5rem;
@@ -27,6 +36,10 @@ header h3 {
 
 main {
     flex: 1;
+    margin-top: 70px; /* Ajuste conforme a altura do seu header */
+}
+header.hide {
+    transform: translateY(-100%);
 }
 
 a {

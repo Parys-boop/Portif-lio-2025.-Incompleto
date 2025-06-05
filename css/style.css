@@ -38,6 +38,13 @@ p{
     text-align: justify;
 }
 
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+} 
+
+
+
 .perfil-container {
     display: flex;
     align-items: center;
@@ -202,6 +209,7 @@ main .materia{
     align-items: center;
     gap: 80px;
     margin: auto;
+    margin-bottom: 40px;
 }
 .texto{
     line-height: 1.8;
@@ -209,15 +217,22 @@ main .materia{
     padding-right: 50px;
     padding-left: 50px;
 }
-.introducao-materia img{
-    margin-left: 25px ;
-}
+
 .introducao-materia h3{
     color: #4E2B9B;
+}
+.conteudo h3 {
+    font-size: 30px;
+    text-align: center;
 }
 .introducao-materia h4{
     color: #4E2B9B;
     margin-bottom: 10px;
+}
+.conteudo h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .introducao-materia img {
@@ -227,10 +242,31 @@ main .materia{
     object-fit: cover;
     border: 3px solid #4E2B9B;
     transition: transform 0.3s, box-shadow 0.3s;
+    margin-left: 25px ;
 }
 .introducao-materia img:hover {
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(179, 138, 255, 0.6);
+}
+.conteudo {
+    text-justify: auto;
+    padding: 30px;
+    margin: auto;
+}
+.conteudo img {
+    border-radius: 10px;
+    width: 900px;
+}
+.lista {
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 750;
+    color: #59399d;
+}
+
+ul li::marker{
+    color: #4E2B9B;
+    font-weight: 900;
 }
 
 /* Responsividade */

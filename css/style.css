@@ -49,6 +49,8 @@ a {
 
 p{
     text-align: justify;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 hr {
@@ -247,6 +249,10 @@ main .materia{
     margin-bottom: 15px;
     text-align: center;
 }
+.conteudo h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
 .introducao-materia img {
     width: 400px;
@@ -268,7 +274,10 @@ main .materia{
 }
 .conteudo img {
     border-radius: 10px;
-    width: 900px;
+    width: 700px;
+}
+#BD1 {
+    width: 400px;
 }
 .lista {
     font-size: 25px;
@@ -284,8 +293,16 @@ ul li::marker{
 
 .topico {
     display: flex;
-    gap: 40px;
-    text-align: center;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.topico img {
+    width: 500px;
+    margin-bottom: 20px;
+}
+#privilegios {
+    margin-left: 20px;
 }
 
 /* Responsividade */

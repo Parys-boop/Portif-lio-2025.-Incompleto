@@ -62,175 +62,8 @@ hr {
     background-image: linear-gradient(to right, rgba(179, 138, 255, 0), rgba(179, 138, 255, 0.75), rgba(179, 138, 255, 0));
 }
 
-/* ========== ESTILOS DA PÁGINA INICIAL ========== */
-.perfil-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 20px;
-}
-
-.foto-perfil img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-    border: 3px solid #4E2B9B;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.foto-perfil img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(179, 138, 255, 0.6);
-}
-
-.introducao {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-}
-
-.introducao h2 {
-    font-size: 2rem;
-    color: #b38aff;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.introducao h3 {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    opacity: 0.8;
-    text-align: center;
-}
-
-.introducao p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.botoes {
-    display: flex;
-    gap: 15px;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-button {
-    background-color: #4E2B9B;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s;
-    font-size: 1rem;
-    min-width: 150px;
-}
-
-button:hover {
-    background-color: #b38aff;
-    transform: translateY(-2px);
-}
-
-.grade {
-    background: rgba(179, 138, 255, 0.1);
-    padding: 30px 20px;
-    margin: 40px 0;
-    border-top: 1px solid rgba(179, 138, 255, 0.2);
-    border-bottom: 1px solid rgba(179, 138, 255, 0.2);
-    backdrop-filter: blur(5px);
-}
-
-.grade h3 {
-    color: #b38aff;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    position: relative;
-}
-
-.grade h3::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(to right, transparent, #b38aff, transparent);
-}
-
-.grade p {
-    text-align: center;
-    color: #ffffff;
-    max-width: 800px;
-    margin: 0 auto 15px;
-}
-
-.disciplinas-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.disciplina-card {
-    background: rgba(30, 20, 40, 0.7);
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s;
-    border: 1px solid rgba(179, 138, 255, 0.3);
-}
-
-.disciplina-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(179, 138, 255, 0.2);
-    border-color: #b38aff;
-}
-
-.disciplina-card h4 {
-    color: white;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.saiba-mais {
-    background-color: transparent;
-    color: #b38aff;
-    border: 2px solid #b38aff;
-    padding: 8px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.saiba-mais:hover {
-    background-color: #b38aff;
-    color: black;
-}
-
-/* ========== ESTILOS DAS PÁGINAS DE MATÉRIAS ========== */
-.materia {
+/* Estilos para a matéria */
+main .materia {
     background-color: rgba(179, 138, 255, 0.1);
     border-radius: 15px;
     padding: 30px;
@@ -416,14 +249,18 @@ footer p {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* ========== RESPONSIVIDADE ========== */
+/* Responsividade */
 @media (max-width: 1024px) {
-    .disciplinas-container {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    .materia {
+        padding: 25px;
     }
     
-    .perfil-container {
-        gap: 40px;
+    .introducao-materia {
+        gap: 30px;
+    }
+    
+    .texto {
+        padding: 0 15px;
     }
 }
 
@@ -440,26 +277,44 @@ footer p {
         margin-top: 60px;
     }
     
-    .introducao {
-        padding: 0 15px;
-    }
-    
-    .botoes {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    button {
-        width: 100%;
-        max-width: 250px;
-    }
-    
-    .grade {
-        padding: 25px 15px;
-    }
-    
     .materia {
-        padding: 25px;
+        margin: 15px 10px;
+        padding: 20px;
+    }
+    
+    .materia h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .introducao-materia {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .texto {
+        padding: 0 10px;
+    }
+    
+    .conteudo {
+        padding: 15px;
+    }
+    
+    .conteudo h3 {
+        font-size: 1.5rem;
+    }
+    
+    .conteudo h4 {
+        font-size: 1.2rem;
+    }
+    
+    .topico {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .topico > div {
+        width: 100%;
     }
 }
 
@@ -469,33 +324,37 @@ footer p {
         font-size: 1.2rem;
     }
     
-    .introducao h2 {
-        font-size: 1.6rem;
-    }
-    
-    .introducao h3 {
-        font-size: 1.1rem;
-    }
-    
-    .grade h3 {
-        font-size: 1.5rem;
-    }
-    
-    .disciplinas-container {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-    }
-    
     .materia {
-        padding: 20px 15px;
-        margin: 15px 10px;
+        padding: 15px;
     }
     
     .materia h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
-    .texto {
-        padding: 0;
+    .introducao-materia h3 {
+        font-size: 1.1rem;
+    }
+    
+    .introducao-materia h4 {
+        font-size: 1rem;
+    }
+    
+    .conteudo h3 {
+        font-size: 1.3rem;
+    }
+    
+    .conteudo h4 {
+        font-size: 1.1rem;
+    }
+    
+    #privilegios {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #privilegios li {
+        width: 100%;
+        text-align: center;
     }
 }

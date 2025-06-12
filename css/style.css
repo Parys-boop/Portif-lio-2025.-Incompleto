@@ -364,7 +364,7 @@ ul li::marker {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: center;
+    /*align-items: center; */
     justify-content: center;
     margin-bottom: 30px;
 }

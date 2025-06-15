@@ -8,7 +8,40 @@
 </head>
 <body>
     <header>
-        <h3>Arthur Pires da Costa</h3>
+        <div class="header-left">
+            <h3>Arthur Pires da Costa</h3>
+        </div>
+
+        <div class="header-right">
+            <h4>
+                <a href="">Home</a>
+            </h4>
+            <h4>
+                <a href="">Sobre Min</a>
+            </h4>
+            <div class="disciplinas-dropdown">
+                <h4>4° ano</h4>
+                <div class="disciplinas-dropdown-content">
+                    <a href="./disciplinas/projetoIntegrado.html">Projeto Integrador</a>
+                    <a href="./disciplinas/bancoDeDados.html">Banco de Dados</a>
+                    <a href="./disciplinas/estruturaDados.html">Estrutura de Dados</a>
+                    <a href="./disciplinas/engenhariaSoftware.html">Engenharia de Software</a>
+                    <a href="">Integração Humano Computador</a>
+                    <a href="#">Técnicas Avançadas de Programação</a>
+                    <a href="#">Técnicas Avançadas de Programação Web e Mobile</a>
+                    <a href="#">Inteligência Corporativa e Modelos de Negócios</a>
+                    <a href="#">Gestão Ágil de Projetos de Software</a>
+                    <a href="#">Organização de Computadores e Sistemas</a>
+                    <a href="#">Organização de Computadores e Sistemas Operacionais</a>
+                    <a href="#">Lingua Inglesa</a>
+                    <a href="#">Matematica Discreta</a>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/Parys-boop"><img src="./imagem/GitHubLogo.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/arthur-pires-948433252/"><img src="./imagem/linkedinLogo.png" alt="LinkedIn"></a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -114,15 +147,42 @@
             </div>
         </div>
         
-    </div>
-</div>
+    
         <div class="Sobre-min" id="sobre">
-
+            <div class="sobre-container">
+                <div class="sobre-content">
+                    <h2>Sobre Mim</h2>
+                    <div class="sobre-texto">
+                        <p>Olá! Meu nome é Arthur Pires da Costa, sou técnico em Análise e Desenvolvimento de Sistemas formado pela ETEC Jales e atualmente estudo na FATEC Jales.</p>
+                        <p>Sou apaixonado por tecnologia e desenvolvimento de software, com especial interesse em banco de dados e programação web. Estou sempre buscando aprender novas tecnologias e melhorar minhas habilidades.</p>
+                    </div>
+                    <div class="email-container">
+                        <h3>Entre em Contato</h3>
+                        <div class="email-box">
+                            <span>arthurpiresdacosta14@gmail.com</span>
+                            <button class="copy-btn" onclick="copyEmail()">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
         <p>© 2025 por Arthur Pires.</p>
     </footer>
+
+<script>
+    function copyEmail() {
+        const email = "arthur.pires@exemplo.com";
+        navigator.clipboard.writeText(email)
+            .then(() => {
+                alert("E-mail copiado para a área de transferência!");
+            })
+            .catch(err => {
+                console.error('Erro ao copiar e-mail: ', err);
+            });
+    }
+</script>
 </body>
 </html>

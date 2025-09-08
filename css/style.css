@@ -320,7 +320,7 @@ button:hover {
 .sobre-container {
     max-width: 1000px;
     margin: 0 auto;
-    background: linear-gradient(97deg, #000000 0%, #1C1519 0%, #4E2B9B 100%);
+    background: rgba(30, 20, 40, 0.7);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);

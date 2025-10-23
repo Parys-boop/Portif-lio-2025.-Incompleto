@@ -18,26 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScroll = currentScroll;
     });
 
-    // Smooth scroll toggle e comportamento dos botões
-    const smoothToggle = document.getElementById("smoothToggle");
+    // Smooth scroll: sempre ativo (removida dependência de checkbox/label)
     const htmlEl = document.documentElement;
-
-    // Ativar por padrão se checkbox já estiver checado
-    if (smoothToggle && smoothToggle.checked) {
-        htmlEl.classList.add("smooth-scroll");
-    } else if (smoothToggle) {
-        htmlEl.classList.remove("smooth-scroll");
-    }
-
-    if (smoothToggle) {
-        smoothToggle.addEventListener("change", function() {
-            if (this.checked) {
-                htmlEl.classList.add("smooth-scroll");
-            } else {
-                htmlEl.classList.remove("smooth-scroll");
-            }
-        });
-    }
+    htmlEl.classList.add("smooth-scroll");
 
     // Botões com data-target que realizam scroll para seções
     document.querySelectorAll(".btn-anchor").forEach(btn => {
@@ -48,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!target) return;
 
             // Se a classe smooth-scroll estiver presente, o CSS cuidará do comportamento.
-            // Caso contrário, usamos scrollIntoView com comportamento 'auto'.
+            // Como agora sempre está presente, o CSS será usado.
             if (htmlEl.classList.contains("smooth-scroll")) {
                 target.scrollIntoView({ block: "start" });
             } else {

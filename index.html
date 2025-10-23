@@ -1,4 +1,3 @@
-<!--Voltando-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,15 +13,14 @@
         </div>
 
         <div class="header-right">
-            <h4>
-                <a href="">Home</a>
-            </h4>
-            <h4>
-                <a href="">Sobre Min</a>
-            </h4>
-            <div class="disciplinas-dropdown">
+            <nav aria-label="Navegação principal">
+                <h4><a href="">Home</a></h4>
+                <h4><a href="">Sobre Mim</a></h4>
+            </nav>
+
+            <div class="disciplinas-dropdown" aria-haspopup="true">
                 <h4>4° ano</h4>
-                <div class="disciplinas-dropdown-content">
+                <div class="disciplinas-dropdown-content" role="menu">
                     <a href="./disciplinas/projetoIntegrado.html">Projeto Integrador</a>
                     <a href="./disciplinas/bancoDeDados.html">Banco de Dados</a>
                     <a href="./disciplinas/estruturaDados.html">Estrutura de Dados</a>
@@ -34,13 +32,14 @@
                     <a href="#">Gestão Ágil de Projetos de Software</a>
                     <a href="#">Organização de Computadores e Sistemas</a>
                     <a href="#">Organização de Computadores e Sistemas Operacionais</a>
-                    <a href="#">Lingua Inglesa</a>
-                    <a href="#">Matematica Discreta</a>
+                    <a href="#">Língua Inglesa</a>
+                    <a href="#">Matemática Discreta</a>
                 </div>
             </div>
+
             <div class="social-icons">
-                <a href="https://github.com/Parys-boop"><img src="./imagem/GitHubLogo.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/arthur-pires-948433252/"><img src="./imagem/linkedinLogo.png" alt="LinkedIn"></a>
+                <a href="https://github.com/Parys-boop" target="_blank" rel="noopener noreferrer"><img src="./imagem/GitHubLogo.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/arthur-pires-948433252/" target="_blank" rel="noopener noreferrer"><img src="./imagem/linkedinLogo.png" alt="LinkedIn"></a>
             </div>
         </div>
     </header>
@@ -48,107 +47,110 @@
     <main>
         <div class="perfil-container">
             <div class="foto-perfil">
-                <img src="imagem\perfil.PNG" alt="">
+                <img src="imagem/perfil.PNG" alt="Foto de perfil de Arthur Pires">
             </div>
             
             <div class="introducao">
                 <h2>Meu Portifólio 2025</h2>
                 <h3>Meu canto digital</h3>
-                <p>     Olá, sou um técnico formado em ADS (Analise em Desenvolvimento de Sistema), pela ETEC Jales com o programa de ensino que integra cursos técnicos profissionalizantes com o ensino médio.</p>
-                <p>     Atualmente sou um estudante da faculdade FATEC Jales onde procuro consiguir meu ensino superior. Este é meu portifólio ode deixarei meus projetos, meus ensinos, meus interesses e meu contato para possiveis interesses.</p>
-                <div class="botoes"></div>
-                    <button>
-                        <a href="#sobre">Sobre-min</a>
+                <p>Olá, sou um técnico habilitado profissionalmente em DS (Desenvolvimento de Sistemas) pela ETEC Jales no curso AMS. Aqui apresento meus projetos, aprendizados e interesses.</p>
+                <p>Atualmente sou estudante da FATEC Jales e continuo me aperfeiçoando em desenvolvimento web e áreas relacionadas.</p>
+
+                <div class="botoes">
+                    <button type="button" class="btn-anchor" data-target="#sobre">
+                        Sobre‑mim
                     </button>
-                    <button>
-                        <a href="#grade">Grade Currilar</a>
+                    <button type="button" class="btn-anchor" data-target="#grade">
+                        Grade Curricular
                     </button>
                 </div>
             </div>
         </div>
+
         <div class="grade" id="grade">
             <h3>Grade Curricular</h3>
-            <div class="grade-descricao"></div>
-                <p>Aqui você encontra uma visão detalhada e transparente de todas as disciplinas e temas que compõem meu 4º semestre no curso de ADS na faculdade</p>
-                <p> Esta seção foi criada para que você possa explorar e compreender a profundidade e a amplitude do conhecimento que estou adquirindo. Ao navegar pelas matérias, você terá um panorama completo de como cada uma</p>
+            <div class="grade-descricao">
+                <p>Aqui você encontra uma visão detalhada e transparente de todas as disciplinas e temas que compõem meu 4º semestre no curso de ADS na faculdade.</p>
+                <p>Esta seção foi criada para que você possa explorar e compreender a profundidade e a amplitude do conhecimento que estou adquirindo.</p>
             </div>
     
             <div class="disciplinas-container">
                 <div class="disciplina-card">
-                <h4>Projeto Integrador</h4>
-                <button class="saiba-mais">
-                    <a href="disciplinas/projetoIntegrado.html">Saiba Mais</a>
-                </button>
-            </div>
+                    <h4>Projeto Integrador</h4>
+                    <button class="saiba-mais">
+                        <a href="disciplinas/projetoIntegrado.html">Saiba Mais</a>
+                    </button>
+                </div>
         
-            <div class="disciplina-card">
-                <h4>Banco de Dados</h4>
-                <button class="saiba-mais">
-                    <a href="disciplinas/bancoDeDados.html">Saiba Mais</a>
-                </button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Banco de Dados</h4>
+                    <button class="saiba-mais">
+                        <a href="disciplinas/bancoDeDados.html">Saiba Mais</a>
+                    </button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Estrutura de Dados</h4>
-                <button class="saiba-mais">
-                    <a href="disciplinas/estruturaDados.html">Saiba Mais</a>
-                </button>
-            </div>
-        
-            <div class="disciplina-card">
-                <h4>Engenharia de Software</h4>
-                <button class="saiba-mais">
-                    <a href="./disciplinas/engenhariaSoftware.html">Saiba Mais</a>
-                </button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Estrutura de Dados</h4>
+                    <button class="saiba-mais">
+                        <a href="disciplinas/estruturaDados.html">Saiba Mais</a>
+                    </button>
+                </div>
+            
+                <div class="disciplina-card">
+                    <h4>Engenharia de Software</h4>
+                    <button class="saiba-mais">
+                        <a href="./disciplinas/engenhariaSoftware.html">Saiba Mais</a>
+                    </button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Interação Humano Computador</h4>
-                <button class="saiba-mais">
-                    <a href="./disciplinas/interaçãoHumanoComputador.html">Saiba Mais</a>
-                </button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Interação Humano Computador</h4>
+                    <button class="saiba-mais">
+                        <a href="./disciplinas/interaçãoHumanoComputador.html">Saiba Mais</a>
+                    </button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Técnicas Avançadas de Programação</h4>
-                <button class="saiba-mais">
-                    <a href="./disciplinas/tecnicasAvancadasdeProgramacao.html">Saiba Mais</a>
-                </button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Técnicas Avançadas de Programação</h4>
+                    <button class="saiba-mais">
+                        <a href="./disciplinas/tecnicasAvancadasdeProgramacao.html">Saiba Mais</a>
+                    </button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Técnicas Avançadas de Programação Web e Mobile</h4>
-                <button class="saiba-mais">Saiba Mais</button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Técnicas Avançadas de Programação Web e Mobile</h4>
+                    <button class="saiba-mais">Saiba Mais</button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Inteligência Corporativa e Modelos de Negócios na Era Digital</h4>
-                <button class="saiba-mais">Saiba Mais</button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Inteligência Corporativa e Modelos de Negócios na Era Digital</h4>
+                    <button class="saiba-mais">Saiba Mais</button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Gestão Ágil de Projetos de Software</h4>
-                <button class="saiba-mais">Saiba Mais</button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Gestão Ágil de Projetos de Software</h4>
+                    <button class="saiba-mais">Saiba Mais</button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Organização de Computadores e Sistemas</h4>
-                <button class="saiba-mais">Saiba Mais</button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Organização de Computadores e Sistemas</h4>
+                    <button class="saiba-mais">Saiba Mais</button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Organização de Computadores e Sistemas Operacionais</h4>
-                <button class="saiba-mais">Saiba Mais</button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Organização de Computadores e Sistemas Operacionais</h4>
+                    <button class="saiba-mais">Saiba Mais</button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Lingua Inglesa</h4>
-                <button class="saiba-mais">Saiba Mais</button>
-            </div>
+                <div class="disciplina-card">
+                    <h4>Língua Inglesa</h4>
+                    <button class="saiba-mais">Saiba Mais</button>
+                </div>
 
-            <div class="disciplina-card">
-                <h4>Matematica Discreta</h4>
-                <button class="saiba-mais">Saiba Mais</button>
+                <div class="disciplina-card">
+                    <h4>Matemática Discreta</h4>
+                    <button class="saiba-mais">Saiba Mais</button>
+                </div>
             </div>
         </div>
         
@@ -158,14 +160,14 @@
                 <div class="sobre-content">
                     <h2>Sobre Mim</h2>
                     <div class="sobre-texto">
-                        <p>Olá! Meu nome é Arthur Pires da Costa, sou técnico em Análise e Desenvolvimento de Sistemas formado pela ETEC Jales e atualmente estudo na FATEC Jales.</p>
-                        <p>Falar Sobre Min</p>
+                        <p>Olá! Meu nome é Arthur Pires da Costa, sou técnico em Desenvolvimento de Sistemas formado pela ETEC Jales e atualmente estudo na FATEC Jales.</p>
+                        <p>Tenho interesse em desenvolvimento web, banco de dados e boas práticas de engenharia de software.</p>
                     </div>
                     <div class="email-container">
                         <h3>Entre em Contato</h3>
                         <div class="email-box">
-                            <span>arthurpiresdacosta14@gmail.com</span>
-                            <button class="copy-btn" onclick="copyEmail()">Copiar</button>
+                            <span id="emailText">arthurpiresdacosta14@gmail.com</span>
+                            <button class="copy-btn" id="copyBtn">Copiar</button>
                         </div>
                     </div>
                 </div>
@@ -178,17 +180,6 @@
         <p>Atualizado até 08/09/2025</p>
     </footer>
 
-<script>
-    function copyEmail() {
-        const email = "arthur.pires@exemplo.com";
-        navigator.clipboard.writeText(email)
-            .then(() => {
-                alert("E-mail copiado para a área de transferência!");
-            })
-            .catch(err => {
-                console.error('Erro ao copiar e-mail: ', err);
-            });
-    }
-</script>
+    <script src="js/script.js"></script>
 </body>
 </html>

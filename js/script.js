@@ -1,28 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Header hide/show on scroll (corrigido selector)
+    // Header hide/show on scroll
     const header = document.querySelector("header");
     let lastScroll = 0;
 
     window.addEventListener("scroll", function() {
         const currentScroll = window.scrollY;
 
-        // Rola para baixo: esconde o header
         if (currentScroll > lastScroll && currentScroll > 50) {
             header.classList.add("hide");
-        } 
-        // Rola para cima: mostra o header
-        else {
+        } else {
             header.classList.remove("hide");
         }
 
         lastScroll = currentScroll;
     });
 
-    // Smooth scroll: sempre ativo (removida dependência de checkbox/label)
+    // Smooth scroll:
     const htmlEl = document.documentElement;
     htmlEl.classList.add("smooth-scroll");
 
-    // Botões com data-target que realizam scroll para seções
     document.querySelectorAll(".btn-anchor").forEach(btn => {
         btn.addEventListener("click", function() {
             const targetSelector = this.getAttribute("data-target");
@@ -30,17 +26,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const target = document.querySelector(targetSelector);
             if (!target) return;
 
-            // Se a classe smooth-scroll estiver presente, o CSS cuidará do comportamento.
-            // Como agora sempre está presente, o CSS será usado.
-            if (htmlEl.classList.contains("smooth-scroll")) {
-                target.scrollIntoView({ block: "start" });
-            } else {
-                target.scrollIntoView({ block: "start", behavior: "auto" });
-            }
+            // usar sempre rolagem suave
+            target.scrollIntoView({ block: "start", behavior: "smooth" });
         });
     });
 
-    // Cópia de e-mail para a área de transferência
+    // Copy e-mail
     const copyBtn = document.getElementById("copyBtn");
     const emailText = document.getElementById("emailText");
     if (copyBtn && emailText) {
@@ -48,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const email = emailText.textContent.trim();
             navigator.clipboard.writeText(email)
                 .then(() => {
-                    // feedback simples; troque por um toast mais elegante se quiser
                     alert("E-mail copiado para a área de transferência!");
                 })
                 .catch(err => {
@@ -56,4 +46,37 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
         });
     }
+
+    // ========== Barra de progresso do curso ==========
+    // A barra representa o mês atual em escala de 1 a 12.
+    // Ex.: mês 8  => 8/12 = 66.66% e texto "////////----"
+
+    function updateCourseProgress(date = new Date()) {
+        const month = (date.getMonth() + 1); // 1..12
+        const totalMonths = 12;
+        const percent = Math.round((month / totalMonths) * 100);
+
+        const progressFill = document.getElementById("progressFill");
+        const progressPercent = document.getElementById("progressPercent");
+        const progressText = document.getElementById("progressText");
+
+        if (progressFill) {
+            progressFill.style.width = percent + "%";
+            // Atualiza aria-valuenow
+            const container = progressFill.closest(".progress-container");
+            if (container) container.setAttribute("aria-valuenow", percent);
+        }
+        if (progressPercent) progressPercent.textContent = percent + "%";
+        if (progressText) {
+            const filled = "/".repeat(month);
+            const empty = "-".repeat(totalMonths - month);
+            progressText.textContent = filled + empty; // exemplo: "////////----"
+        }
+    }
+
+    // chama ao carregar
+    updateCourseProgress();
+
+    // opcional: atualizar à meia-noite caso a página fique aberta (atualiza a cada 1 hora)
+    setInterval(() => updateCourseProgress(new Date()), 1000 * 60 * 60);
 });

@@ -53,8 +53,10 @@
             <div class="introducao">
                 <h2>Meu Portifólio 2025</h2>
                 <h3>Meu canto digital</h3>
-                <p>Olá, sou um técnico formado em ADS (Análise e Desenvolvimento de Sistemas) pela ETEC Jales. Aqui apresento meus projetos, aprendizados e interesses.</p>
-                <p>Atualmente sou estudante da FATEC Jales e continuo me aperfeiçoando em desenvolvimento web e áreas relacionadas.</p>
+                <p>
+                    Olá! Sou técnico em DS (Desenvolvimento de Sistemas) e futuro tecnólogo pela FATEC Jales em ADS(Analise e Desenvolvimento de Sistemas).
+                    Este é o meu espaço digital, onde compartilho meus estudos aprendidos.
+                </p>
 
                 <div class="botoes">
                     <button type="button" class="btn-anchor" data-target="#sobre">
@@ -63,6 +65,21 @@
                     <button type="button" class="btn-anchor" data-target="#grade">
                         Grade Curricular
                     </button>
+                </div>
+
+                <!-- Barra de progresso do curso -->
+                <div class="course-progress" aria-hidden="false">
+                    <div class="progress-label-row">
+                        <span class="progress-title">Andamento do curso</span>
+                        <span id="progressPercent" class="progress-percent" aria-live="polite">0%</span>
+                    </div>
+                    <div class="progress-container" role="progressbar"
+                         aria-labelledby="progressPercent"
+                         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="progress-track">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

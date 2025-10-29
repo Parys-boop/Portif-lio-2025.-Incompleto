@@ -1,0 +1,859 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html.smooth-scroll {
+    /* Quando a classe é aplicada, ativamos rolamento suave */
+    scroll-behavior: smooth;
+}
+
+.header-left {
+    flex: 1;
+}
+/*Barra de carregamento do curso {*/
+    .course-progress {
+        max-width: 780px;
+        margin: 18px auto 6px;
+        padding: 10px 12px;
+        background: rgba(30,20,40,0.45);
+        border-radius: 12px;
+        border: 1px solid rgba(179,138,255,0.14);
+    }
+
+    .progress-label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .progress-title {
+        color: #f8f5ff;
+        font-weight: 700;
+        color: #b38aff;
+    }
+
+    .progress-percent {
+        font-weight: 700;
+        color: #eae6ff;
+    }
+
+    /* track e fill: usando paleta do site */
+    .progress-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .progress-track {
+        width: 100%;
+        height: 14px;
+        background: rgba(255,255,255,0.06);
+        border-radius: 999px;
+        overflow: hidden;
+        border: 1px solid rgba(179,138,255,0.12);
+    }
+
+    .progress-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #b38aff 0%, #6b46c1 100%);
+        transition: width 600ms ease;
+    }
+
+    /* representação textual: 12 caracteres */
+    .progress-text {
+        font-family: monospace;
+        color: rgba(234,230,255,0.95);
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+/*}*/
+
+/* barra de Carregamento do Curso {*/
+.course-progress {
+    max-width: 780px;
+    margin: 18px auto 6px;
+    padding: 10px 12px;
+    background: rgba(30,20,40,0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(179,138,255,0.14);
+}
+
+.progress-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.progress-title {
+    color: #f8f5ff;
+    font-weight: 700;
+    color: #b38aff;
+}
+
+.progress-percent {
+    font-weight: 700;
+    color: #eae6ff;
+}
+
+/* track e fill: usando paleta do site */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 14px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid rgba(179,138,255,0.12);
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #b38aff 0%, #6b46c1 100%);
+    transition: width 600ms ease;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Estilo para o dropdown de disciplinas */
+.disciplinas-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.disciplinas-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(30, 20, 40, 0.9);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+    right: 0;
+    border: 1px solid #b38aff;
+}
+
+.disciplinas-dropdown:hover .disciplinas-dropdown-content {
+    display: block;
+}
+
+.disciplinas-dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.disciplinas-dropdown-content a:hover {
+    background-color: rgba(179, 138, 255, 0.3);
+}
+
+/* Estilo para as imagens de redes sociais */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+body {
+    background: linear-gradient(97deg, #000000 0%, #1C1519 0%, #4E2B9B 100%);
+    color: white;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1rem 2rem;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(97deg, #000000 0%, #1C1519 0%, #4E2B9B 100%);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    display: flex;
+}
+
+header.hide {
+    transform: translateY(-100%);
+}
+
+.header-right h4 a, 
+.disciplinas-dropdown h4, 
+.social-icons a img {
+    transition: all 0.3s ease;
+}
+
+.header-right h4 a:hover, 
+.disciplinas-dropdown h4:hover {
+    color: #b38aff !important;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 5px rgba(179, 138, 255, 0.3);
+}
+
+
+header h3 {
+    font-size: 1.5rem;
+    color: #b38aff;
+    font-weight: 600;
+}
+
+main {
+    flex: 1;
+    margin-top: 70px;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(179, 138, 255, 0), rgba(179, 138, 255, 0.75), rgba(179, 138, 255, 0));
+}
+
+/* ========== ESTILOS DA PÁGINA INICIAL ========== */
+.perfil-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.foto-perfil img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #4E2B9B;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.foto-perfil img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(179, 138, 255, 0.6);
+}
+
+.introducao {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.introducao h2 {
+    font-size: 2rem;
+    color: #b38aff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.introducao h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.introducao p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #4E2B9B;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 1rem;
+    min-width: 150px;
+}
+
+button:hover {
+    background-color: #b38aff;
+    transform: translateY(-2px);
+}
+
+.btn-anchor {
+    /* botão que atua como âncora */
+}
+
+.smooth-toggle {
+    color: #fff;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grade {
+    background: rgba(179, 138, 255, 0.1);
+    padding: 30px 20px;
+    margin: 40px 0;
+    border-top: 1px solid rgba(179, 138, 255, 0.2);
+    border-bottom: 1px solid rgba(179, 138, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.grade h3 {
+    color: #b38aff;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.grade h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #b38aff, transparent);
+}
+
+.grade p {
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto 15px;
+}
+
+.disciplinas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.disciplina-card {
+    background: rgba(30, 20, 40, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid rgba(179, 138, 255, 0.3);
+}
+
+.disciplina-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(179, 138, 255, 0.2);
+    border-color: #b38aff;
+}
+
+.disciplina-card h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saiba-mais {
+    background-color: transparent;
+    color: #b38aff;
+    border: 2px solid #b38aff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.saiba-mais:hover {
+    background-color: #b38aff;
+    color: black;
+}
+
+.Sobre-min {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #4E2B9B;
+    margin-top: 40px;
+}
+
+.sobre-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(30, 20, 40, 0.7);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-content {
+    text-align: center;
+    color: #f0e8e8;
+}
+
+.sobre-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #4E2B9B;
+    position: relative;
+}
+
+.sobre-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #4E2B9B, transparent);
+}
+
+.sobre-texto {
+    margin-bottom: 40px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #fcfcfc;
+}
+
+.email-container {
+    margin-top: 40px;
+}
+
+.email-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #4E2B9B;
+}
+
+.email-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    border: 2px solid #4E2B9B;
+    border-radius: 30px;
+    padding: 10px 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.email-box span {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.copy-btn {
+    background-color: #4E2B9B;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #3a1f75;
+    transform: translateY(-2px);
+}
+
+/* ========== ESTILOS DAS PÁGINAS DE MATÉRIAS ========== */
+.materia {
+    background-color: rgba(179, 138, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border: 1px solid rgba(179, 138, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.materia h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: #b38aff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.materia h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #b38aff, transparent);
+}
+
+.introducao-materia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.texto {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 300px;
+    padding: 0 20px;
+}
+
+.introducao-materia h3 {
+    color: #b38aff;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.introducao-materia h4 {
+    color: #d4c0ff;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.introducao-materia img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #4E2B9B;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.introducao-materia img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(179, 138, 255, 0.6);
+}
+
+.conteudo {
+    padding: 20px;
+    margin: auto;
+}
+
+.conteudo h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 30px 0 20px;
+    color: #b38aff;
+}
+
+.listas-grandes h3{
+    font-size: 1.8rem;
+    text-align: left;
+    margin: 30px 0 20px;
+    color: #b38aff;
+}
+
+.conteudo h4 {
+    font-size: 1.4rem;
+    margin: 25px 0 15px;
+    color: #d4c0ff;
+}
+
+.conteudo h5 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #d4c0ff;
+    text-align: left;
+}
+
+.conteudo img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#BD1 {
+    max-width: 400px;
+}
+
+.lista {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #b38aff;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+ul li::marker {
+    color: #b38aff;
+    font-weight: bold;
+}
+
+.topico {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /*align-items: center; */
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.topico > div {
+    flex: 1;
+    min-width: 300px;
+}
+
+.topico img {
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto;
+}
+
+#privilegios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#privilegios li {
+    background: rgba(179, 138, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #b38aff;
+    transition: all 0.3s;
+}
+
+#privilegios li:hover {
+    background: rgba(179, 138, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(30, 20, 40, 0.7);
+    border-top: 1px solid rgba(179, 138, 255, 0.2);
+    margin-top: 30px;
+}
+
+footer p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.botaoGIT {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.botaoGIT a {
+    display: inline-block;
+    background: linear-gradient(135deg, #4E2B9B 0%, #6b46c1 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #b38aff;
+    box-shadow: 0 4px 15px rgba(179, 138, 255, 0.3);
+    min-width: 250px;
+}
+
+.botaoGIT a:hover {
+    background: linear-gradient(135deg, #6b46c1 0%, #4E2B9B 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(179, 138, 255, 0.5);
+    border-color: #ffffff;
+}
+
+.botaoGIT a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(179, 138, 255, 0.3);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media (max-width: 480px) {
+    .botaoGIT a {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .disciplinas-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .perfil-container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    
+    header h3 {
+        font-size: 1.3rem;
+    }
+    
+    main {
+        margin-top: 60px;
+    }
+    
+    .introducao {
+        padding: 0 15px;
+    }
+    
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .grade {
+        padding: 25px 15px;
+    }
+    
+    .materia {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h3 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .introducao h2 {
+        font-size: 1.6rem;
+    }
+    
+    .introducao h3 {
+        font-size: 1.1rem;
+    }
+    
+    .grade h3 {
+        font-size: 1.5rem;
+    }
+    
+    .disciplinas-container {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .materia {
+        padding: 20px 15px;
+        margin: 15px 10px;
+    }
+    
+    .materia h2 {
+        font-size: 1.8rem;
+    }
+    
+    .texto {
+        padding: 0;
+    }
+}

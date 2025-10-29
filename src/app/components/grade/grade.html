@@ -1,0 +1,17 @@
+<div class="grade" id="grade">
+    <h3>Grade Curricular</h3>
+    <div class="grade-descricao">
+        <p>Aqui você encontra uma visão detalhada e transparente de todas as disciplinas e temas que compõem meu 4º semestre no curso de ADS na faculdade.</p>
+        <p>Esta seção foi criada para que você possa explorar e compreender a profundidade e a amplitude do conhecimento que estou adquirindo.</p>
+    </div>
+
+    <div class="disciplinas-container">
+        <div class="disciplina-card" *ngFor="let discipline of disciplines">
+            <h4>{{ discipline.title }}</h4>
+            <button class="saiba-mais" *ngIf="discipline.hasLink">
+                <a [href]="discipline.link">Saiba Mais</a>
+            </button>
+            <button class="saiba-mais" *ngIf="!discipline.hasLink">Saiba Mais</button>
+        </div>
+    </div>
+</div>

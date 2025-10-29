@@ -1,59 +1,124 @@
-# PortfolioAngular
+# Portfolio Arthur Pires - Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+Este é o portfólio pessoal de Arthur Pires da Costa, reconstruído em Angular.
 
-## Development server
+## 📋 Sobre o Projeto
 
-To start a local development server, run:
+Portfolio profissional desenvolvido em Angular que apresenta:
+- Informações pessoais e profissionais
+- Grade curricular do curso de ADS (Análise e Desenvolvimento de Sistemas)
+- Disciplinas e projetos acadêmicos
+- Links para redes sociais (GitHub e LinkedIn)
 
+## 🏗️ Estrutura do Projeto
+
+```
+.
+├── legacy/                  # Site original em HTML/CSS/JS (backup)
+├── public/                  # Arquivos públicos (imagens, favicon)
+│   ├── images/             # Imagens do portfolio
+│   └── disciplinas/        # Páginas HTML das disciplinas
+├── src/
+│   ├── app/
+│   │   ├── components/     # Componentes Angular
+│   │   │   ├── header/     # Cabeçalho com navegação
+│   │   │   ├── home/       # Seção inicial com foto e introdução
+│   │   │   ├── grade/      # Grade curricular
+│   │   │   ├── about/      # Sobre mim
+│   │   │   └── footer/     # Rodapé
+│   │   ├── pages/          # Páginas
+│   │   │   └── discipline/ # Página de disciplina
+│   │   └── services/       # Serviços
+│   ├── styles.css          # Estilos globais
+│   └── index.html          # HTML principal
+└── angular.json            # Configuração do Angular
+
+```
+
+## 🚀 Tecnologias Utilizadas
+
+- **Angular 19** - Framework principal
+- **TypeScript** - Linguagem de programação
+- **CSS3** - Estilização
+- **HTML5** - Estrutura
+
+## 📦 Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/Parys-boop/Portif-lio-2025.-Incompleto.git
+cd Portif-lio-2025.-Incompleto
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+## 🎯 Como Usar
+
+### Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse `http://localhost:4200/` no navegador.
 
-## Code scaffolding
+### Build de Produção
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+Para criar uma versão de produção:
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos compilados estarão na pasta `dist/portfolio-angular`.
 
-## Running unit tests
+### Testes
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+Para executar os testes:
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## 🎨 Funcionalidades
 
-For end-to-end (e2e) testing, run:
+- ✅ Design responsivo
+- ✅ Navegação suave entre seções
+- ✅ Barra de progresso do curso (atualizada automaticamente)
+- ✅ Dropdown de disciplinas
+- ✅ Copiar e-mail para área de transferência
+- ✅ Header que se oculta ao rolar a página
+- ✅ Links para redes sociais
+- ✅ Grade curricular com cards das disciplinas
+- ✅ Seção "Sobre Mim" com informações de contato
 
-```bash
-ng e2e
-```
+## 📝 Site Legado
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+O site original em HTML/CSS/JS está preservado na pasta `legacy/` para referência e backup.
 
-## Additional Resources
+Para visualizar o site legado, basta abrir o arquivo `legacy/index.html` em um navegador.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👨‍💻 Autor
+
+**Arthur Pires da Costa**
+- GitHub: [@Parys-boop](https://github.com/Parys-boop)
+- LinkedIn: [Arthur Pires](https://www.linkedin.com/in/arthur-pires-948433252/)
+- Email: arthurpiresdacosta14@gmail.com
+
+## 📄 Licença
+
+© 2025 por Arthur Pires. Todos os direitos reservados.
+
+## 🔄 Histórico de Versões
+
+### v2.0.0 (2025)
+- ✨ Migração completa para Angular
+- 🎨 Manutenção do design original
+- 📦 Estrutura modular com componentes reutilizáveis
+- 🔧 Configuração de build otimizada
+
+### v1.0.0 (Legacy)
+- 🌐 Site original em HTML/CSS/JavaScript
+- 📂 Preservado na pasta `legacy/`

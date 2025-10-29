@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h3>Arthur Pires da Costa</h3>
+        </div>
+
+        <div class="header-right">
+            <h4>
+                <a href="../index.html">Home</a>
+            </h4>
+            <h4>
+                <a href="">Sobre Min</a>
+            </h4>
+            <div class="disciplinas-dropdown">
+                <h4>4° ano</h4>
+                <div class="disciplinas-dropdown-content">
+                    <a href="./projetoIntegrado.html">Projeto Integrador</a>
+                    <a href="./bancoDeDados.html">Banco de Dados</a>
+                    <a href="./estruturaDados.html">Estrutura de Dados</a>
+                    <a href="./engenhariaSoftware.html">Engenharia de Software</a>
+                    <a href="./interaçãoHumanoComputador.html">Integração Humano Computador</a>
+                    <a href="./tecnicasAvancadasdeProgramacao.html">Técnicas Avançadas de Programação</a>
+                    <a href="#">Técnicas Avançadas de Programação Web e Mobile</a>
+                    <a href="#">Inteligência Corporativa e Modelos de Negócios</a>
+                    <a href="#">Gestão Ágil de Projetos de Software</a>
+                    <a href="#">Organização de Computadores e Sistemas</a>
+                    <a href="#">Organização de Computadores e Sistemas Operacionais</a>
+                    <a href="#">Lingua Inglesa</a>
+                    <a href="#">Matematica Discreta</a>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/Parys-boop"><img src="../imagem/GitHubLogo.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/arthur-pires-948433252/"><img src="../imagem/linkedinLogo.png" alt="LinkedIn"></a>            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="materia">
+            <h2>Banco de Dados</h2>
+            <div class="introducao-materia">
+                <img src="../imagem/bdImagem.png" alt="Imagem do Banco de Dados">
+                <div class="texto">
+                    <h3>Professor Responsavel: </h3>
+                    <h4>Alexandre Aparecido Bernardes</h4>
+                    <p>Nesta disciplinas aprimoramos nossos conhecimentosem BD com gestões avançadas, tanto relacional e não relacional. Esta disciplina envolve a aplicação de técnicas complexas para o desenvolvimento e otimização de sistemas de armazenamento de dados eficientes e escaláveis. Inclui o estudo de estratégias como modelagem de dados relacional e NoSQL, clustering, replicação e sharding. Foca na integração de dados de diversas fontes e na garantia da consistência, disponibilidade e confiabilidade dos dados. Além disso, aborda práticas de segurança, como criptografia e controle de acesso, e considera aspectos de desempenho, como indexação e otimização de consultas. </p>
+                </div>
+            </div>
+            <div class="conteudo">
+                    <ol type="1" class="topico">
+                        <li>Controle de acesso (DLC)</li>
+                        <li>Orimização com Procedure/Functions</li>
+                        <li>Postgress especifico</li>
+                    </ol>
+                    <ul class="topico">
+                        <div>
+                            <li>Gerenciamento de usúarios, grupos e permissões</li>
+                            <li>Comando <b>GRANT</b> e <b>REVOKE</b></li>
+                        </div>
+
+                        <div>
+                            <li>Encapsulamento de lógica SQL</li>
+                            <li>Melhoria de desempenho e segurança</li>
+                        </div>
+                        
+                        <div>
+                            <li>Papéis (Roles) e herança de privilegios</li>
+                            <li>Suporte a multiplas linguagens e suporte</li>
+                        </div>
+                    </ul>
+
+            
+                <h3>Controle de acesso (DLC)</h3>
+                <p>Um papel (role) no PostgreSQL é uma entidade usada para gerenciar permissões, acessos e privilégios em bancos de dados. Esses papéis podem representar usuários (com login), grupos (sem login), ou ambos.</p>
+
+                <h4>Criação de papeis</h4>
+                <img src="../imagem/exemploBD1.PNG" alt="imagem de exemplo de codigo de criação de ROLEs" id="BD1">
+                <p>Com o papel criado, podem se usar varios comandos de acesso como: </p>
+                <div class="topico" style="align-items: center;">
+                    <div> <img src="../imagem/exemploBD2.PNG" alt="imagem de exemplo de codigo de criação de ROLEs"></div>
+                    <div><p>Nesta imagem temos exemplos de alterar as permissões de uma role, sendo eles de permitir ou impedir login, definir super usuario, permitir ou impedir a criação de BD, definir a senha, definir o tempo da conta, limitar o numero de conexões.</p></div>
+                </div>
+
+                <h4>Comando Basicos</h4>
+                <div class="topico">
+                    <div>
+                        <h4>Comandos de ações</h4>
+                        <p>Comandos basicos para listar, alterar e criar/apagar alguma ROLE</p>
+                        <img src="../imagem/exemploBD3.PNG" alt="">
+                    </div>
+                    <div>
+                        <h4>Grupos de Papéis</h4>
+                        <p>Papéis tambem podem funionar como grupos para facilitar o gerenciamento de permissões em conjunto</p>
+                        <img src="../imagem/exemploBD4.PNG" alt="">
+                    </div>
+                </div>
+                <H4>privilégios</H4>
+                <p style="text-align: center;">para conceder ou revogar permissões sobre objetos do banco (como tableas ou funções): </p>
+                <img src="../imagem/exemploBD5.PNG" alt="">
+
+                <h5>privilegios mais comuns: </h5>
+                <ol id="privilegios">
+                    <li><b>SELECT</b></li>
+                    <li><b>INSERT</b></li>
+                    <li><b>UPDATE</b></li>
+                    <li><b>DELETE</b></li>
+                </ol>
+
+                <h3>Orimização com Procedure/Functions</h3>
+                <p>Stored Procedures e Functions são blocos de código SQL armazenados no servidor do PostgreSQL. Elas são usadas para:</p>
+                <ul>
+                    <li>Melhor desempenho</li>
+                    <li>Reultilizar código</li>
+                    <li>Proteger a logica do sistema</li>
+                </ul>
+                <p><b>FUNCTION: </b>Retorna um valor. Pode ser usada em consultas SQL, como em SELECT minha_funcao()</p>
+                <p><b>PROCEDURE: </b>Não retorna valor diretamente. É chamada com o comando CALL. Indicada para tarefas que não precisam retornar dados.</p>
+
+                <h4>Tipos de funções</h4>
+                <ol>
+                    <li>SQL</li>
+                    <ul>
+                        <li>Usam apenas comandos SQL simples.</li>
+                        <li>Sem estruturas de controle como IF, LOOP, etc.</li>
+                    </ul>
+                    
+                    <li>PL/pgSQL</li>
+                    <ul>
+                        <li>Linguagem nativa do PostgreSQL.</li>
+                        <li>Suporta variáveis, condições, laços de repetição, etc.</li>
+                    </ul>
+
+                    <li>Linguagens externas</li>
+                    <ul>
+                        <li>É possível criar funções usando linguagens como Python, C, entre outras.</li>
+                        <li>Útil para tarefas mais avançadas ou específicas.</li>
+                    </ul>
+                </ol>
+
+                <h4>Sintaxe: </h4>
+                <div class="topico">
+                    <div>
+                        <h4>PROCEDURE</h4>
+                        <img src="../imagem/exemploBD6.PNG" alt="">
+                    </div>
+                    
+                    <div>
+                        <h4>FUNCTIONS</h4>
+                        <img src="../imagem/exemploBD7.PNG" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 por Arthur Pires.</p>
+        <p>Atualizado até 08/09/2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
